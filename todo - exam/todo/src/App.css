@@ -1,0 +1,164 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #8e9eab, #eef2f3);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+/* Main container */
+.container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 18px;
+  width: 480px;
+  max-width: 95%;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #2d3436;
+}
+
+/* Input + buttons */
+.input-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid #dcdde1;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.input-box input:focus {
+  border-color: #0984e3;
+  box-shadow: 0 0 6px rgba(9,132,227,0.3);
+}
+
+/* Common button styles */
+.input-box button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+/* Add/Update button */
+.input-box button:nth-of-type(1) {
+  background: #0984e3;
+}
+
+.input-box button:nth-of-type(1):hover {
+  background: #74b9ff;
+  transform: scale(1.05);
+}
+
+/* Clear All button */
+.input-box button:nth-of-type(2) {
+  background: #6c5ce7;
+}
+
+.input-box button:nth-of-type(2):hover {
+  background: #a29bfe;
+  transform: scale(1.05);
+}
+
+/* Todo list */
+.todo-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.todo-item {
+  background: #f5f6fa;
+  border-radius: 12px;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s ease;
+  animation: slideIn 0.5s ease;
+}
+
+.todo-item:hover {
+  background: #dfe6e9;
+  transform: translateX(5px);
+}
+
+/* Task text */
+.todo-item li {
+  flex: 1;
+  font-size: 16px;
+  color: #2d3436;
+  font-weight: 500;
+}
+
+/* Buttons inside todo */
+.btn-group {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-group button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.edit-btn {
+  background: #00b894;
+}
+.edit-btn:hover {
+  background: #55efc4;
+  transform: scale(1.1);
+}
+
+.remove-btn {
+  background: #d63031;
+}
+.remove-btn:hover {
+  background: #ff7675;
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideIn {
+  from {opacity: 0; transform: translateX(-30px);}
+  to {opacity: 1; transform: translateX(0);}
+}
