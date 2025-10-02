@@ -1,0 +1,187 @@
+body {
+    background-color: #ffffff;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+    flex-wrap: wrap; /* small screen ke liye wrap karega */
+}
+
+.mainl, .mainr {
+    flex: 1 1 300px; /* responsive width */
+    max-width: 400px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    min-height: 500px; /* chhoti screen pe bhi ek base height mile */
+}
+
+.name {
+    background-color: #090909;
+    text-align: center;
+    padding: 12px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 1px solid #444;
+}
+
+.main_msgl, .main_msgr {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.chat-boxl, .chat-boxr {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.divone, .divtwo {
+    display: flex;
+    flex-direction: column;
+}
+
+.divone h1, .divtwo h1 {
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    word-wrap: break-word;
+    font-size: 18px;
+}
+
+.divone #you {
+    background-color: #4a90e2;
+    color: #fff;
+    align-self: flex-end;
+}
+
+.divone #Resiver {
+    background-color: #333;
+    color: #fff;
+    align-self: flex-start;
+}
+
+.divtwo #Resiver {
+    background-color: #e94e77;
+    color: #fff;
+    align-self: flex-end;
+}
+
+.divtwo #you {
+    background-color: #333;
+    color: #fff;
+    align-self: flex-start;
+}
+
+/* Input and button layout */
+.input-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.input-container input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+}
+
+.input-container input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+.input-container input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px #888;
+}
+
+.input-container button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #555;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.input-container button:hover {
+    background-color: #777;
+}
+
+.btn-l {
+    background-color: #0066cc;
+}
+
+.btn-l:hover {
+    background-color: #004a99;
+}
+
+.btn-r {
+    background-color: #cc3300;
+}
+
+.btn-r:hover {
+    background-color: #992600;
+}
+
+/* 🔽 Media Queries for extra responsiveness */
+@media (max-width: 900px) {
+    .main {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .mainl, .mainr {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 500px) {
+    .divone h1, .divtwo h1 {
+        font-size: 16px;
+        max-width: 90%;
+    }
+
+    .input-container input[type="text"] {
+        font-size: 14px;
+    }
+
+    .input-container button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
